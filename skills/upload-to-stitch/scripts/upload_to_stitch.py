@@ -97,7 +97,7 @@ def call_batch_create_screens(
 
   try:
     print("Calling urlopen...")
-    with urlopen(req, timeout=30) as resp:
+    with urlopen(req, timeout=120) as resp:
       print(f"urlopen returned. Status: {resp.getcode()}")
       body = resp.read().decode("utf-8")
       print(f"Response status: {resp.getcode()}")
