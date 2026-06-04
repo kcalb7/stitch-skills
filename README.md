@@ -11,7 +11,8 @@ The fastest way to set up the full Stitch plugin suite globally.
 
 Add the Stitch Skills marketplace, then install the plugins you need.
 
-**Via CLI** (recommended):
+<details open>
+<summary><strong>Via CLI</strong> (recommended)</summary>
 
 ```bash
 codex plugin marketplace add google-labs-code/stitch-skills --ref main \
@@ -24,6 +25,8 @@ codex plugin marketplace add google-labs-code/stitch-skills --ref main \
 > [!TIP]
 > The `--sparse` flags are optional — they limit the checkout to only the
 > listed paths for a faster clone. Omit them to pull the entire repository.
+
+</details>
 
 <details>
 <summary><strong>Via the Codex UI</strong></summary>
@@ -47,10 +50,12 @@ Once the marketplace is registered, install any combination of:
 #### Claude Code & Cursor
 
 ```bash
+# Claude Code — installs into the current project
 npx plugins add google-labs-code/stitch-skills --scope project --target claude-code
 ```
 
 ```bash
+# Cursor — installs into the current workspace
 npx plugins add google-labs-code/stitch-skills --scope workspace --target cursor
 ```
 
