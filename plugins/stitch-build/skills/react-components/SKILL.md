@@ -87,24 +87,21 @@ You are a frontend engineer focused on transforming designs into clean React cod
 
 ## Phase 4: Execution steps
 
-> **GATE: Phase 4 is complete ONLY when ALL validation checks pass and the dev server renders correctly.**
+> **GATE: Phase 4 verification, audits, and validation checks are optional. You MUST ask the user's permission to proceed with validation scripts, running local dev servers, or automated browser testing.**
 
 1. **Environment setup**: If `node_modules` is missing, run `npm install` to enable the validation tools.
 2. **Data layer**: Create `src/data/mockData.ts` based on the design content.
 3. **Component drafting**: Use `resources/component-template.tsx` as a base. Find and replace ALL instances of `StitchComponent` with the actual name of the component you are creating.
 4. **Application wiring**: Update the project entry point (like `App.tsx`) to render the new components.
-5. **Quality check** — ALL of the following are MANDATORY:
-    * Run `npm run validate <file_path>` for **EVERY** `.tsx` file in `src/components/` and `src/pages/`. ALL must report `✨ COMPONENT VALID.`
-    * Run `tsc --noEmit` to verify zero TypeScript errors.
-    * Verify the final output against `resources/architecture-checklist.md` — every checkbox must be satisfied.
-    * Start the dev server with `npm run dev` to verify the live result.
-    * Report the validation results to the user with a clear pass/fail summary.
+5. **Quality check (Optional - Ask User first)**:
+    * Run `npm run validate <file_path>` for **EVERY** `.tsx` file in `src/components/` and `src/pages/` to report component validity.
+    * Run `tsc --noEmit` to verify TypeScript compile status.
+    * Check output against `resources/architecture-checklist.md`.
+    * Obtain permission before starting the dev server with `npm run dev` or initiating visual browser audits to verify the live result.
 
 ### Anti-patterns for Phase 4
-- ❌ Skipping `npm run validate` for any component.
-- ❌ Not running `tsc --noEmit`.
-- ❌ Not checking `resources/architecture-checklist.md`.
-- ❌ Declaring "done" without starting the dev server.
+- ❌ Commencing dev server start or browser audits without user consent.
+- ❌ Declaring task "done" without verifying code compiles.
 
 ## Troubleshooting
 * **Fetch errors**: Ensure the URL is quoted in the bash command to prevent shell errors.
